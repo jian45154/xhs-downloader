@@ -1,0 +1,9 @@
+# 本机转录服务依赖
+# 安装：pip install -r requirements.txt
+#
+# 注意：faster-whisper 还需要系统已安装 FFmpeg（需在 PATH 中），用于解码音视频。
+#   Windows: winget install Gyan.FFmpeg  或  choco install ffmpeg
+#   macOS:   brew install ffmpeg
+#   Linux:   sudo apt install ffmpeg
+
+faster-whisper>=1.0.0

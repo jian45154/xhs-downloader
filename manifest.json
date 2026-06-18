@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "小红书笔记下载器（视频转录版）",
+  "version": "0.2.0",
+  "description": "下载小红书笔记文本、图片和视频，并使用本地 Whisper 转录。",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "小红书笔记下载器（视频转录版）"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.xiaohongshu.com/*"],
+      "js": ["contentScript.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "host_permissions": [
+    "https://www.xiaohongshu.com/*",
+    "https://*.xhscdn.com/*",
+    "https://*.xhscdn.com.cn/*",
+    "http://127.0.0.1:18765/*"
+  ],
+  "permissions": ["downloads"],
+  "icons": {
+    "16": "icons/icon_16.png",
+    "32": "icons/icon_32.png",
+    "48": "icons/icon_48.png",
+    "128": "icons/icon_128.png"
+  }
+}

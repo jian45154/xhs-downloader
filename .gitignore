@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+.whisper-env/
+venv/
+.venv/
+
+# 运行时日志
+transcription-service.log
+transcription-service-error.log
+*.log
+
+# 转录/下载产物
+*.zip
+
+# 编辑器 / 系统
+.DS_Store
+.idea/
+.vscode/
+Thumbs.db
